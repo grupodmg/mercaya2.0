@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mercaya">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".FrutasActivity"></activity>
+        <activity android:name=".PapasActivity"></activity>
+        <activity android:name=".ImagenesPapas"></activity>
+        <activity android:name=".CarnesActivity"></activity>
+        <activity android:name=".GranosActivity"></activity>
+        <activity android:name=".CondimentosActivity"></activity>
+        <activity android:name=".HarinasActivity"></activity>
+        <activity android:name=".LechesActivity"></activity>
+        <activity android:name=".VerdurasActivity"></activity>
+
+
+        <activity
+            android:name=".ScrollingActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

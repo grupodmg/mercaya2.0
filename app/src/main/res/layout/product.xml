@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    tools:context=".ScrollingActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true">
+
+            <EditText
+                android:id="@+id/cantComp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detalle"
+                android:layout_margin="0dp"
+                android:hint=" Cantidad "
+                android:inputType="number"></EditText>
+
+            <ImageView
+                android:id="@+id/Image"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/banner" />
+
+
+            <ImageView
+                android:id="@+id/producImgAdd"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignTop="@+id/cantComp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/addshopping"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cantComp"
+                ></ImageView>
+
+<!--            android:onClick="goToClass"-->
+
+            <TextView
+                android:id="@+id/Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Image"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="14dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="3dp"
+                android:text="TextView"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/detalle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Name"
+                android:layout_alignStart="@+id/Name"
+                android:layout_alignLeft="@+id/Name"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="8dp"
+                android:text="cantidad"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <include
+        android:id="@+id/productoInclude"
+        layout="@layout/content_scrolling"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </include>
+
+
+</LinearLayout>
